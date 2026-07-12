@@ -3,17 +3,25 @@
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
 
-export default function Section({ id, title, description, bgColor }) {
+export default function Section({
+  id,
+  title,
+  description,
+  bgColor,
+  children,
+  fullHeight = false,
+}) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
   return (
     <section
       id={id}
-      className={`relative min-h-screen flex items-center justify-center bg-gradient-to-b ${bgColor}`}
+      className={`relative flex items-center justify-center bg-linear-to-b ${bgColor} ${
+        fullHeight ? 'min-h-screen' : 'py-24 md:py-32'
+      }`}
     >
-      {/* Decorative line */}
-      <div className='absolute left-1/2 top-0 w-px h-32 bg-gradient-to-b from-transparent via-gray-700 to-transparent' />
+      <div className='absolute left-1/2 top-0 w-px h-32 bg-linear-to-b from-transparent via-gray-700 to-transparent' />
 
       <div ref={ref} className='max-w-4xl mx-auto px-6 text-center'>
         <motion.span
@@ -29,7 +37,7 @@ export default function Section({ id, title, description, bgColor }) {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className='text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent'
+          className='text-4xl md:text-6xl font-bold mb-6 bg-linear-to-r from-white to-gray-400 bg-clip-text text-transparent'
         >
           {title}
         </motion.h2>
@@ -43,29 +51,12 @@ export default function Section({ id, title, description, bgColor }) {
           {description}
         </motion.p>
 
-        {/* Feature cards */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className='grid md:grid-cols-3 gap-6 mt-12'
         >
-          {['Performant', 'Accessible', 'Customizable'].map((item, i) => (
-            <div
-              key={item}
-              className='p-6 rounded-2xl bg-gray-900/50 border border-gray-800 hover:border-cyan-500/30 transition-colors'
-            >
-              <div className='w-12 h-12 rounded-xl bg-gradient-to-br from-cyan-500/20 to-purple-500/20 flex items-center justify-center mb-4 mx-auto'>
-                <span className='text-2xl'>
-                  {i === 0 ? '⚡' : i === 1 ? '♿' : '🎨'}
-                </span>
-              </div>
-              <h3 className='text-lg font-semibold text-white mb-2'>{item}</h3>
-              <p className='text-sm text-gray-500'>
-                Lenis তোমার site কে {item.toLowerCase()} করে তোলে effortlessly।
-              </p>
-            </div>
-          ))}
+          {children}
         </motion.div>
       </div>
     </section>

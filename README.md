@@ -1,125 +1,288 @@
-# 🚀 Lenis Smooth Scroll — Complete Feature Guide
+# 🚀 Najimul Portfolio
 
-> **Lenis** Modern Smooth Scrolling, Progress Bar, Back to Top, Parallax, Horizontal Scroll.
+> "I'm Najimul, a full-stack developer from a non-CSE background, self-taught and passionate about building real-world products with the MERN stack and Next.js."
 
+A modern, high-performance portfolio website built with **Next.js**, featuring buttery-smooth scrolling via **Lenis**, stunning animations powered by **GSAP** and **Framer Motion**, and a sleek dark UI crafted with **Tailwind CSS**.
+
+---
+
+## ✨ Live Demo
+
+🔗 **[View Live Portfolio](https://your-portfolio-url.vercel.app)**
+
+---
+
+## 🛠️ Tech Stack
 ![Next.js](https://img.shields.io/badge/Next.js-15-black?style=flat-square&logo=next.js)
 ![React](https://img.shields.io/badge/React-19-61DAFB?style=flat-square&logo=react)
 ![Tailwind](https://img.shields.io/badge/Tailwind-3.4-38BDF8?style=flat-square&logo=tailwindcss)
 ![Lenis](https://img.shields.io/badge/Lenis-1.x-FF6B6B?style=flat-square)
 ![Framer Motion](https://img.shields.io/badge/Framer_Motion-12-FF0055?style=flat-square&logo=framer)
 
----
 
-## 📋 Table of Contents
-
-- [Features Overview](#-features-overview)
-- [Installation](#-installation)
-- [Folder Structure](#-folder-structure)
-- [Core Setup](#-core-setup)
-- [Feature-by-Feature Guide](#-feature-by-feature-guide)
-  - [1. Smooth Scroll](#1-smooth-scroll-base-feature)
-  - [2. Progress Bar](#2-progress-bar-top-scroll-indicator)
-  - [3. Back to Top](#3-back-to-top-button)
-  - [4. Parallax Effects](#4-parallax-effects)
-  - [5. Scroll-Triggered Animations](#5-scroll-triggered-animations)
-  - [6. Horizontal Scroll](#6-horizontal-scroll)
-  - [7. Stagger Animations](#7-stagger-animations)
-  - [8. Form Reveal](#8-form-reveal-animation)
-  - [9. Multi-Step Progress](#9-progress-indicators-multi-step-forms)
-  - [10. Anchor Links](#10-anchor-link-integration)
-  - [11. Route Reset](#11-route-change-reset)
-  - [12. Modal Lock](#12-modal-scroll-lock)
-- [Tips & Best Practices](#-tips--best-practices)
-- [Precautions](#-precautions)
-- [Quick Reference Table](#-quick-reference-table)
-- [License](#-license)
+| Technology | Purpose |
+|------------|---------|
+| **Next.js 15** | React framework with App Router for SSR & SSG |
+| **React 19** | UI library with latest features |
+| **Tailwind CSS 4** | Utility-first CSS framework for rapid styling |
+| **Lenis** | Buttery smooth scroll with 60fps performance |
+| **GSAP** | Advanced timeline animations & scroll-triggered effects |
+| **Framer Motion** | React-native animations, gestures & layout transitions |
+| **React Icons** | Beautiful icon library |
 
 ---
 
-## 🎯 Features Overview
+## 🎨 Features
 
-| # | Feature | Description | Use Case |
-|---|---|---|---|
-| 1 | **Smooth Scroll** | Base smooth scrolling | সব page এ |
-| 2 | **Progress Bar** | Top scroll indicator | Long pages |
-| 3 | **Back to Top** | Floating button | 1000px+ scroll |
-| 4 | **Parallax** | Background movement | Hero sections |
-| 5 | **Scroll Animations** | Element reveal on scroll | Card grids |
-| 6 | **Horizontal Scroll** | Vertical → Horizontal | Galleries |
-| 7 | **Stagger** | Sequential reveal | Lists |
-| 8 | **Form Reveal** | Smooth form appearance | Booking forms |
-| 9 | **Progress Indicator** | Multi-step progress | Checkout forms |
-| 10 | **Anchor Links** | Smooth same-page nav | Navigation menus |
-| 11 | **Route Reset** | Scroll reset on navigation | Multi-page apps |
-| 12 | **Modal Lock** | Background scroll prevent | Modals/Dialogs |
+### Smooth Scrolling
+- **Lenis** integration for buttery smooth scroll experience
+- Custom scroll progress bar (linear + circular)
+- Smooth anchor navigation with offset support
+- Back-to-top button with animated reveal
+
+### Animations & Interactions
+- **GSAP** text reveal animations on hero section
+- **Framer Motion** scroll-triggered section reveals
+- 3D card tilt effect on project cards (mouse-follow)
+- Image reveal with clip-path animation on scroll
+- Staggered entrance animations for grid items
+- Magnetic hover effects on buttons
+- Glow & gradient transitions on hover
+
+### UI/UX
+- Dark theme with cyan-purple gradient accents
+- Fully responsive design (mobile → desktop)
+- Custom scrollbar styling
+- Filterable project grid with animated transitions
+- Glassmorphism effects with backdrop blur
+- Loading states & empty state handling
+
+### Performance
+- Optimized images with Next.js Image component
+- Smooth 60fps animations via `requestAnimationFrame`
+- Efficient re-renders with React best practices
+- SEO-friendly with Next.js metadata API
 
 ---
 
-## 📦 Installation
+## 📁 Project Structure
+
+```
+app/
+├── components/
+│   ├── animations/          # Reusable animation components
+│   ├── providers/           # Context providers (Lenis, etc.)
+│   ├── sections/            # Page sections (Hero, Projects, etc.)
+│   └── ui/                  # Reusable UI components
+├── data/
+│   └── projectsData.js      # Projects data
+├── hooks/
+│   └── useLenis.js          # Custom Lenis hook
+├── globals.css              # Global styles & Tailwind directives
+├── layout.jsx               # Root layout with providers
+└── page.jsx                 # Main page
+
+public/
+├── images/                  # Project screenshots & assets
+└── favicon.ico
+```
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- **Node.js** 18+
+- **Yarn** package manager
+- **macOS** (development environment)
+
+### Installation
 
 ```bash
-# Project create
-yarn create next-app@latest smooth-scroll-app --js --tailwind --eslint --app --src-dir --import-alias "@/*"
+# Clone the repository
+git clone https://github.com/najimhaq/najimul-portfolio-cyan.git
 
-cd smooth-scroll-app
+# Navigate to project directory
+cd najimul-portfolio
 
-# Dependencies install
-yarn add lenis framer-motion
+# Install dependencies with Yarn
+yarn install
 
-smooth-scroll-app/
-│
-├── src/
-│   ├── app/
-│   │   ├── layout.js              ← Root layout (Lenis wrap)
-│   │   ├── page.js                ← Home page
-│   │   └── globals.css            ← Global styles
-│   │
-│   ├── components/
-│   │   ├── ui/                    ← Reusable UI
-│   │   │   ├── SmoothScroll.js
-│   │   │   ├── ScrollProgress.js
-│   │   │   ├── BackToTop.js
-│   │   │   ├── ScrollReset.js
-│   │   │   ├── SmoothLink.js
-│   │   │   └── Modal.js
-│   │   │
-│   │   ├── layout/                ← Layout components
-│   │   │   ├── Navbar.js
-│   │   │   └── Footer.js
-│   │   │
-│   │   └── sections/              ← Page sections
-│   │       ├── HeroParallax.js
-│   │       ├── FeatureCards.js
-│   │       ├── HorizontalGallery.js
-│   │       └── BookingForm.js
-│   │
-│   ├── hooks/                     ← Custom hooks
-│   │   ├── useLenisScroll.js
-│   │   └── useScrollDirection.js
-│   │
-│   └── lib/                       ← Configs
-│       └── lenis-config.js
-│
-├── tailwind.config.js
-└── package.json
-
-
-📝 License
-This project is licensed under the MIT License.
-
-🤝 Contributing
-Contributions, issues and feature requests are welcome!
-Fork the project
-Create your feature branch (git checkout -b feature/AmazingFeature)
-Commit your changes (git commit -m 'Add some AmazingFeature')
-Push to the branch (git push origin feature/AmazingFeature)
-Open a Pull Request
-
-📧 Contact
-For questions or support, please open an issue on GitHub.
-<div align="center">
-
-Made with ❤️ using Lenis + Next.js + Framer Motion
-⭐ Star this repo if you found it helpful!
-</div>
+# Start development server
+yarn dev
 ```
+
+Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+### Build for Production
+
+```bash
+# Create optimized production build
+yarn build
+
+# Start production server
+yarn start
+```
+
+---
+
+## 📦 Dependencies
+
+```json
+{
+  "next": "^15.x",
+  "react": "^19.x",
+  "react-dom": "^19.x",
+  "tailwindcss": "^4.x",
+  "lenis": "^1.x",
+  "gsap": "^3.x",
+  "framer-motion": "^11.x",
+  "react-icons": "^5.x"
+}
+```
+
+---
+
+## 🎯 Key Components
+
+### SmoothScrollProvider
+Global Lenis instance wrapped in React Context. Provides smooth scrolling across the entire application and integrates with GSAP ScrollTrigger.
+
+### ScrollProgressBar
+Real-time scroll progress indicator with:
+- Top linear progress bar (gradient animated)
+- Circular progress indicator (desktop only)
+- Spring physics for natural motion
+
+### ProjectCard
+Interactive project card featuring:
+- 3D tilt effect on mouse move
+- Image reveal animation on scroll
+- Hover overlay with live/GitHub links
+- Tech stack tags with gradient borders
+- Glow effects and gradient underline
+
+### Section
+Reusable section wrapper with:
+- Scroll-triggered entrance animations
+- Decorative gradient orbs
+- Animated section labels
+- Consistent spacing & typography
+
+---
+
+## 🎨 Customization
+
+### Changing Colors
+Edit the gradient colors in `tailwind.config.js` or directly in component classes:
+
+```css
+/* From cyan to purple (default) */
+bg-gradient-to-r from-cyan-500 to-purple-600
+
+/* Change to your preferred palette */
+bg-gradient-to-r from-emerald-500 to-blue-600
+```
+
+### Adding New Projects
+Update `app/data/projectsData.js`:
+
+```javascript
+{
+  id: 6,
+  title: 'Your New Project',
+  description: 'Project description here.',
+  techs: ['Next.js', 'Tailwind', 'MongoDB'],
+  image: '/your-image.png',
+  liveLink: 'https://your-project.vercel.app',
+  githubLink: 'https://github.com/yourusername/project',
+  category: 'webapp',
+}
+```
+
+### Adjusting Scroll Speed
+Modify Lenis configuration in `SmoothScrollProvider.jsx`:
+
+```javascript
+const lenis = new Lenis({
+  duration: 1.2,        // Higher = slower scroll
+  wheelMultiplier: 1,   // Mouse scroll speed
+  touchMultiplier: 2,   // Touch scroll speed
+});
+```
+
+---
+
+## 📱 Responsive Breakpoints
+
+| Breakpoint | Width | Usage |
+|------------|-------|-------|
+| `sm` | 640px | Small tablets |
+| `md` | 768px | Tablets |
+| `lg` | 1024px | Laptops |
+| `xl` | 1280px | Desktops |
+| `2xl` | 1536px | Large screens |
+
+---
+
+## 🌐 Deployment
+
+### Vercel (Recommended)
+
+```bash
+# Install Vercel CLI
+yarn global add vercel
+
+# Deploy
+vercel --prod
+```
+
+### Environment Variables
+
+Create `.env.local` for local development:
+
+```env
+NEXT_PUBLIC_SITE_URL=https://your-domain.com
+```
+
+---
+
+## 🤝 Connect With Me
+
+- 🌐 **Portfolio**: [your-portfolio-url.vercel.app](https://your-portfolio-url.vercel.app)
+- 💻 **GitHub**: [@najimhaq](https://github.com/najimhaq)
+- 💼 **LinkedIn**: [Your LinkedIn](https://linkedin.com/in/yourprofile)
+- 📧 **Email**: your.email@example.com
+
+---
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+---
+
+## 🙏 Acknowledgments
+
+- [Lenis](https://github.com/darkroomengineering/lenis) by Darkroom Engineering
+- [GSAP](https://greensock.com/gsap/) by GreenSock
+- [Framer Motion](https://www.framer.com/motion/) by Framer
+- [Tailwind CSS](https://tailwindcss.com/) by Tailwind Labs
+- [Next.js](https://nextjs.org/) by Vercel
+
+---
+##  🤝 Contributing
+- Contributions, issues and feature requests are welcome!
+- Fork the project
+- Create your feature branch (git checkout -b feature/AmazingFeature)
+- Commit your changes (git commit -m 'Add some AmazingFeature')
+- Push to the branch (git push origin feature/AmazingFeature)
+- Open a Pull Request
+
+## 📧 Contact
+For questions or support, please open an issue on GitHub.
+
+<p align="center">
+  Built with ❤️ by <strong>Najimul</strong>
+</p>

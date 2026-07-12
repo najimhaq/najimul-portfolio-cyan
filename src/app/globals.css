@@ -1,5 +1,18 @@
 @import 'tailwindcss';
 
+:root {
+  --font-inter: 'Inter', sans-serif;
+  --font-playfair: 'Playfair Display', serif;
+}
+
+body {
+  font-family: var(--font-inter);
+}
+
+h1, h2, h3 {
+  font-family: var(--font-playfair);
+}
+
 /* Lenis required styles */
 html.lenis,
 html.lenis body {
