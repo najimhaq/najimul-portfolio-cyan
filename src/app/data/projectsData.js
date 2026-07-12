@@ -54,4 +54,14 @@ export const projectsData = [
     githubLink: 'https://github.com/najimhaq/foodie-fine-dining',
     category: 'ecommerce',
   },
+  {
+    id: 6,
+    title: 'Travel Theme',
+    description: 'Customizable Travel theme for developers with animations.',
+    techs: ['Next.js', 'Tailwind', 'MongoDB', 'Stripe'],
+    image: '/wonderlast.png',
+    liveLink: 'https://wonderlast-coral.vercel.app/',
+    githubLink: 'https://github.com/najimhaq/wonderlast-travel-practise',
+    category: 'productivity',
+  },
 ];
