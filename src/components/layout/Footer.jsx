@@ -5,17 +5,17 @@ import { FiGithub, FiLinkedin, FiMail, FiInstagram } from 'react-icons/fi';
 
 const socials = [
   { icon: FiGithub, href: 'https://github.com/najimhaq', label: 'GitHub' },
-      {
-        icon: FiLinkedin,
-        href: 'https://www.linkedin.com/in/haq-najim',
-        label: 'LinkedIn',
-      },
-      {
-        icon: FiInstagram,
-        href: 'https://www.instagram.com/raju_khl',
-        label: 'Instagram',
-      },
-      { icon: FiMail, href: 'mailto:mdnajimulhaque@gmail.com', label: 'Email' },
+  {
+    icon: FiLinkedin,
+    href: 'https://www.linkedin.com/in/haq-najim',
+    label: 'LinkedIn',
+  },
+  {
+    icon: FiInstagram,
+    href: 'https://www.instagram.com/raju_khl',
+    label: 'Instagram',
+  },
+  { icon: FiMail, href: 'mailto:mdnajimulhaque@gmail.com', label: 'Email' },
 ];
 
 const quickLinks = [
@@ -26,10 +26,6 @@ const quickLinks = [
 ];
 
 export default function Footer() {
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
-
   return (
     <footer className='relative border-t border-white/10 bg-gray-950'>
       <div className='absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-cyan-500/40 to-transparent' />
@@ -83,11 +79,11 @@ export default function Footer() {
               const Icon = s.icon;
               return (
                 <Link
-                  key={s.name}
+                  key={s.label}
                   href={s.href}
                   target='_blank'
                   rel='noopener noreferrer'
-                  aria-label={s.name}
+                  aria-label={s.label}
                   className='flex items-center justify-center w-10 h-10 rounded-full bg-white/5 border border-white/10 text-gray-400 hover:text-cyan-400 hover:border-cyan-500/40 transition-colors'
                 >
                   <Icon size={16} />
