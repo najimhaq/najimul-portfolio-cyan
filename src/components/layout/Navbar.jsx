@@ -68,9 +68,15 @@ export default function Navbar() {
           ))}
         </div>
 
-        <button className='px-4 py-2 text-sm rounded-full bg-linear-to-r from-cyan-500 to-purple-500 text-white font-medium hover:shadow-lg hover:shadow-cyan-500/25 transition-shadow'>
-          Get Started
-        </button>
+        <a
+          target='_blank'
+          rel='noopener noreferrer'
+          href='assets/Najimul_Haque_Resume.pdf'
+          download
+          className='px-4 py-2 text-sm rounded-full bg-linear-to-r from-cyan-500 to-purple-500 text-white font-medium hover:shadow-lg hover:shadow-cyan-500/25 transition-shadow'
+        >
+          Download Resume
+        </a>
       </div>
     </motion.nav>
   );

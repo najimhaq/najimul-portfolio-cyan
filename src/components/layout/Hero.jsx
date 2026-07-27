@@ -45,8 +45,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.4 }}
           className='text-lg md:text-xl text-gray-400 max-w-2xl mx-auto mb-10'
         >
-          Full-stack developer building smooth, modern web experiences with
-          Next.js, Express, and MongoDB.
+          I build fast, scalable web applications using Next.js, Node.js,Express, MongoDB, and PostgreSQL.
         </motion.p>
 
         <motion.div

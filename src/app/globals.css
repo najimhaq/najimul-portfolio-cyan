@@ -13,6 +13,7 @@ h1, h2, h3 {
   font-family: var(--font-playfair);
 }
 
+
 /* Lenis required styles */
 html.lenis,
 html.lenis body {
@@ -47,9 +48,11 @@ html.lenis body {
 
 /* Problem: Users with motion sensitivity আছে। */
 @media (prefers-reduced-motion: reduce) {
-  * {
-    animation-duration: 0.01ms !important;
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
     animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
   }
 }
+

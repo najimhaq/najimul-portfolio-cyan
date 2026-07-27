@@ -4,17 +4,44 @@ import Section from "@/components/sections/Section";
 
 
 const stats = [
-  { label: 'Projects Built', value: '15+' },
-  { label: 'Tech Stack', value: 'MERN' },
-  { label: 'Learning', value: 'C, PostgreSQL' },
+  {
+    label: 'React, Next.js App Router, Tailwind CSS, Framer Motion',
+    value: 'Frontend',
+  },
+  {
+    label: 'MNode.js, Express.js, JWT, REST API',
+    value: 'Backend',
+  },
+  {
+    label: 'MongoDB, PostgreSQL, Prisma ORM',
+    value: 'Database',
+  },
+  {
+    label: 'Git, GitHub, Vercel, VS Code, Postman',
+    value: 'Tooling',
+  },
+  {
+    label: 'Figma, Canva, Photoshop, Illustrator',
+    value: 'Design',
+  },
+  {
+    label: 'TypeScript, System Design, C, Python',
+    value: 'Currently Learning',
+  },
 ];
+
+
+
 
 export default function AboutPage() {
   return (
     <Section
       id='about'
       title='About Me'
-      description="I'm Najimul, a full-stack developer from a non-CSE background, self-taught and passionate about building real-world products with the MERN stack and Next.js."
+      description='I am a self-taught full-stack developer focused on building production-minded
+      web applications. I enjoy designing clean user interfaces, secure authentication systems, REST APIs, and practical database schemas.
+
+    Currently, I am strengthening my skills in TypeScript, PostgreSQL, Prisma, C fundamentals, and system design.'
       bgColor='from-gray-950 via-blue-950/20 to-gray-950'
     >
       <div className='grid md:grid-cols-3 gap-6 mt-4'>

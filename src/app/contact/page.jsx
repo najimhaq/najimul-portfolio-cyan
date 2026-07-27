@@ -11,6 +11,12 @@ export default function Contact() {
       description="Have a project in mind? Reach out and let's build something great."
       bgColor='from-gray-950 via-purple-950/20 to-gray-950'
     >
+      <div className='flex items-center justify-center gap-2 mb-8'>
+        <span className='w-2 h-2 rounded-full bg-green-400 animate-pulse' />
+        <p className='text-sm text-gray-400'>
+          Available for internships, junior full-stack roles, and freelance projects
+        </p>
+      </div>
       <form className='space-y-4 max-w-xl mx-auto text-left'>
         <input
           type='text'

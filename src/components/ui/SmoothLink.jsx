@@ -11,7 +11,6 @@ export default function SmoothLink({ href, children, className, ...props }) {
       e.preventDefault();
       scrollToElement(href);
     }
-    // Route links (e.g. "/projects") fall through to Next.js Link navigation
   };
 
   return (

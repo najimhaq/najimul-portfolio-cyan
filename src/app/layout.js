@@ -21,18 +21,38 @@ const playfair = Playfair_Display({
   variable: '--font-playfair',
 });
 export const metadata = {
-  title: 'Najimul Haque - Web Developer Portfolio',
+  metadataBase: new URL('https://www.najimul.xyz'),
+  title: {
+    default: 'Najimul Haque | Full-Stack Developer',
+    template: '%s | Najimul Haque',
+  },
   description:
-    'Professional portfolio of Najimul Haque, a Full Stack Developer specializing in React, Next.js, and Modern Web Technologies',
-  keywords: 'Najimul, Portfolio, Web Developer, React, Next.js, Full Stack',
-  authors: [{ name: 'Najimul Haque' }],
+    'Portfolio of Najimul Haque, a full-stack developer specializing in React, Next.js, Node.js, Express, and MongoDB. Building fast, modern web applications.',
+  keywords: [
+    'Najimul Haque',
+    'Full Stack Developer',
+    'Next.js Developer',
+    'MERN Stack',
+    'Web Developer Bangladesh',
+  ],
   openGraph: {
-    title: 'Najimul Haque - Web Developer Portfolio',
-    description: 'Full Stack Developer specializing in React, Next.js',
-    url: 'https://najimul.xyz',
-    siteName: 'Najimul Portfolio',
-    locale: 'en_US',
+    title: 'Najimul Haque | Full-Stack Developer',
+    description:
+      'Portfolio showcasing full-stack projects built with Next.js, Express, and MongoDB.',
+    url: 'https://www.najimul.xyz',
+    siteName: 'Najimul Haque Portfolio',
+    images: [{ url: '/og-image.png', width: 1200, height: 630 }],
     type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Najimul Haque | Full-Stack Developer',
+    description:
+      'Portfolio showcasing full-stack projects built with Next.js, Express, and MongoDB.',
+    images: ['/og-image.png'],
+  },
+  icons: {
+    icon: '/favicon.ico',
   },
 };
 
