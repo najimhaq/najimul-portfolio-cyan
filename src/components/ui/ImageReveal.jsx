@@ -2,6 +2,7 @@
 
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
+import ImageSkeleton from './ImageSkeleton';
 
 export default function ImageReveal({ src, alt, className }) {
   const ref = useRef(null);
@@ -17,12 +18,12 @@ export default function ImageReveal({ src, alt, className }) {
   );
 
   return (
-    <div ref={ref} className={className}>
+    <div ref={ref} className={`relative ${className}`}>
       <motion.div
         style={{ clipPath }}
-        className='w-full h-full overflow-hidden'
+        className='relative w-full h-full overflow-hidden'
       >
-        <img src={src} alt={alt} className='w-full h-full object-cover' />
+        <ImageSkeleton src={src} alt={alt} className='w-full h-full' />
       </motion.div>
     </div>
   );

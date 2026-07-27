@@ -1,13 +1,12 @@
 import { Playfair_Display, Inter } from 'next/font/google';
 import './globals.css';
-import SmoothScroll from '@/components/ui/SmoothScroll';
 import Navbar from '@/components/layout/Navbar';
 import ScrollReset from '@/components/ui/ScrollReset';
 import ScrollProgress from '@/components/ui/ScrollProgress';
 import BackToTop from '@/components/ui/BackToTop';
-import CustomCursor from '@/components/ui/CustomCursor';
 import SmoothScrollProvider from '@/components/ui/SmoothScroll';
 import Footer from '@/components/layout/Footer';
+import { Analytics } from '@vercel/analytics/next';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -20,6 +19,7 @@ const playfair = Playfair_Display({
   weight: '400',
   variable: '--font-playfair',
 });
+
 export const metadata = {
   metadataBase: new URL('https://www.najimul.xyz'),
   title: {
@@ -61,22 +61,19 @@ export default function RootLayout({ children }) {
     <html
       lang='en'
       data-theme='dark'
-      data-scroll-behavior='smooth'
       suppressHydrationWarning
-      className={`${inter.className} ${playfair.className} dark`}
+      className={`${inter.variable} ${playfair.variable} dark`}
     >
-      <body className='flex min-h-screen flex-col bg-black text-white antialiased'>
+      <body className='flex min-h-screen flex-col bg-black text-white antialiased font-sans'>
         <SmoothScrollProvider>
           <ScrollReset />
           <Navbar />
           <ScrollProgress />
-          {/* <CustomCursor /> */}
-          <main className='grow'>
-            <div className='mx-auto max-w-full'>{children}</div>
-          </main>
+          <main className='grow'>{children}</main>
           <BackToTop />
           <Footer />
         </SmoothScrollProvider>
+        <Analytics />
       </body>
     </html>
   );

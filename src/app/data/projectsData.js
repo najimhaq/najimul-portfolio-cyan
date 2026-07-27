@@ -9,6 +9,7 @@ export const projectsData = [
     liveLink: 'https://suncart-summer-essentials-store-ten.vercel.app/',
     githubLink: 'https://github.com/najimhaq/suncart-summer-essentials-store',
     category: 'ecommerce',
+    featured: true,
   },
   {
     id: 2,
@@ -20,18 +21,18 @@ export const projectsData = [
     liveLink: 'https://keen-friends-keeper.vercel.app/',
     githubLink: 'https://github.com/najimhaq/keen-friends-keeper',
     category: 'productivity',
+    featured: false,
   },
   {
     id: 3,
     title: 'Tracker Platform',
     description: 'Markdown supported blogging platform for content creators.',
     techs: ['React', 'Tailwind', 'Daisy UI'],
-
     image: '/github-issues-tracker.png',
-
     liveLink: 'https://github-issues-tracker-a5.vercel.app/',
     githubLink: 'https://github.com/najimhaq/github-issues-tracker-a5',
     category: 'blog',
+    featured: false,
   },
   {
     id: 4,
@@ -42,26 +43,29 @@ export const projectsData = [
     liveLink: 'https://penguin-shopping-web.vercel.app/',
     githubLink: 'https://github.com/najimhaq/Penguin-Shopping-Web',
     category: 'ecommerce',
+    featured: false,
   },
   {
     id: 5,
-    title: 'Restaurent Theme',
+    title: 'Restaurant Theme',
     description:
-      'Customizable Restaurent theme for developers with animations.',
+      'Customizable restaurant theme for developers with animations.',
     techs: ['React', 'Framer Motion', 'Tailwind'],
     image: '/restaurent.png',
     liveLink: 'https://foodie-fine-dining.vercel.app/',
     githubLink: 'https://github.com/najimhaq/foodie-fine-dining',
     category: 'ecommerce',
+    featured: true,
   },
   {
     id: 6,
     title: 'Travel Theme',
-    description: 'Customizable Travel theme for developers with animations.',
+    description: 'Customizable travel theme for developers with animations.',
     techs: ['Next.js', 'Tailwind', 'MongoDB', 'Stripe'],
     image: '/wonderlast.png',
     liveLink: 'https://wonderlast-coral.vercel.app/',
     githubLink: 'https://github.com/najimhaq/wonderlast-travel-practise',
     category: 'productivity',
+    featured: false,
   },
 ];
