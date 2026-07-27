@@ -7,7 +7,7 @@ import {
   FiMail,
   FiGithub,
   FiLinkedin,
-  FiTwitter,
+  FiInstagram,
   FiSend,
   FiDownload,
 } from 'react-icons/fi';
@@ -49,10 +49,14 @@ export default function Contact() {
     { icon: FiGithub, href: 'https://github.com/najimhaq', label: 'GitHub' },
     {
       icon: FiLinkedin,
-      href: 'https://linkedin.com/in/najimhaq',
+      href: 'https://www.linkedin.com/in/haq-najim',
       label: 'LinkedIn',
     },
-    { icon: FiTwitter, href: 'https://twitter.com/najimhaq', label: 'Twitter' },
+    {
+      icon: FiInstagram,
+      href: 'https://www.instagram.com/raju_khl',
+      label: 'Instagram',
+    },
     { icon: FiMail, href: 'mailto:mdnajimulhaque@gmail.com', label: 'Email' },
   ];
 

@@ -1,16 +1,21 @@
 'use client';
 
 import Link from 'next/link';
-import { FiGithub, FiLinkedin, FiMail, FiArrowUp } from 'react-icons/fi';
+import { FiGithub, FiLinkedin, FiMail, FiInstagram } from 'react-icons/fi';
 
 const socials = [
-  { name: 'GitHub', href: 'https://github.com/najimhaq', icon: FiGithub },
-  {
-    name: 'LinkedIn',
-    href: 'https://linkedin.com/in/najimhaq',
-    icon: FiLinkedin,
-  },
-  { name: 'Email', href: 'mailto:mdnajimulhaque@gmail.com', icon: FiMail },
+  { icon: FiGithub, href: 'https://github.com/najimhaq', label: 'GitHub' },
+      {
+        icon: FiLinkedin,
+        href: 'https://www.linkedin.com/in/haq-najim',
+        label: 'LinkedIn',
+      },
+      {
+        icon: FiInstagram,
+        href: 'https://www.instagram.com/raju_khl',
+        label: 'Instagram',
+      },
+      { icon: FiMail, href: 'mailto:mdnajimulhaque@gmail.com', label: 'Email' },
 ];
 
 const quickLinks = [
@@ -77,7 +82,7 @@ export default function Footer() {
             {socials.map((s) => {
               const Icon = s.icon;
               return (
-                <a
+                <Link
                   key={s.name}
                   href={s.href}
                   target='_blank'
@@ -86,7 +91,7 @@ export default function Footer() {
                   className='flex items-center justify-center w-10 h-10 rounded-full bg-white/5 border border-white/10 text-gray-400 hover:text-cyan-400 hover:border-cyan-500/40 transition-colors'
                 >
                   <Icon size={16} />
-                </a>
+                </Link>
               );
             })}
           </div>
