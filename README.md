@@ -8,7 +8,7 @@ A modern, high-performance portfolio website built with **Next.js**, featuring b
 
 ## ✨ Live Demo
 
-🔗 **[View Live Portfolio](https://your-portfolio-url.vercel.app)**
+🔗 **[View Live Portfolio](https://www.najimul.com/)**
 
 ---
 
@@ -250,10 +250,10 @@ NEXT_PUBLIC_SITE_URL=https://your-domain.com
 
 ## 🤝 Connect With Me
 
-- 🌐 **Portfolio**: [your-portfolio-url.vercel.app](https://your-portfolio-url.vercel.app)
+- 🌐 **Portfolio**: [your-portfolio-url.vercel.app](https://www.najimul.com/)
 - 💻 **GitHub**: [@najimhaq](https://github.com/najimhaq)
 - 💼 **LinkedIn**: [Your LinkedIn](https://linkedin.com/in/yourprofile)
-- 📧 **Email**: your.email@example.com
+- 📧 **Email**: mdnajimulhaque@gmail.com
 
 ---
 
