@@ -13,6 +13,10 @@ h1, h2, h3 {
   font-family: var(--font-playfair);
 }
 
+.dot-bg {
+  background-image: radial-gradient(circle, rgba(255,255,255,0.15) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
 
 /* Lenis required styles */
 html.lenis,
@@ -55,4 +59,3 @@ html.lenis body {
     scroll-behavior: auto !important;
   }
 }
-

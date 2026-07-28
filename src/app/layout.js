@@ -8,6 +8,7 @@ import SmoothScrollProvider from '@/components/ui/SmoothScroll';
 import Footer from '@/components/layout/Footer';
 import { Analytics } from '@vercel/analytics/next';
 
+
 const inter = Inter({
   subsets: ['latin'],
   weight: ['400', '500', '600', '700'],
@@ -67,8 +68,9 @@ export default function RootLayout({ children }) {
       <body className='flex min-h-screen flex-col bg-black text-white antialiased font-sans'>
         <SmoothScrollProvider>
           <ScrollReset />
-          <Navbar />
+          {/* <CursorGlow /> */}
           <ScrollProgress />
+          <Navbar />
           <main className='grow'>{children}</main>
           <BackToTop />
           <Footer />

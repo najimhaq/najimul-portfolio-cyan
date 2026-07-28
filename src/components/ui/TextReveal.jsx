@@ -1,7 +1,7 @@
 'use client';
 
 import { useRef, useEffect } from 'react';
-import { gsap, ScrollTrigger } from '@/lib/gsap-config';
+import { gsap } from '@/lib/gsap-config';
 
 export default function TextReveal({ text = '', className, delay = 0 }) {
   const wrapperRef = useRef(null);
