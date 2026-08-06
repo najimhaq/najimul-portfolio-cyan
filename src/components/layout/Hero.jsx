@@ -26,17 +26,22 @@ export default function Hero() {
       id='home'
       className='relative isolate flex min-h-svh items-center justify-center overflow-hidden px-4 pb-16 pt-24 sm:px-6 sm:pb-20 sm:pt-28 lg:px-8 lg:pt-32'
     >
+      {/* Base background */}
       <div className='absolute inset-0 -z-30 bg-[#050507]' />
 
+      {/* Animated background */}
       <div className='absolute inset-0 -z-20 opacity-50 sm:opacity-60 md:opacity-70'>
         <LiquidBackground />
       </div>
 
+      {/* Subtle grid */}
       <div className='pointer-events-none absolute inset-0 -z-10 opacity-30 [background-image:linear-gradient(rgba(255,255,255,0.035)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.035)_1px,transparent_1px)] [background-size:36px_36px] sm:[background-size:48px_48px] md:opacity-60' />
 
+      {/* Desktop ambient glow */}
       <div className='pointer-events-none absolute left-1/2 top-1/2 -z-10 hidden h-[26rem] w-[26rem] -translate-x-1/2 -translate-y-1/2 rounded-full bg-cyan-500/10 blur-[120px] md:block lg:h-[34rem] lg:w-[34rem]' />
 
       <div className='relative z-10 mx-auto w-full max-w-6xl text-center'>
+        {/* Availability badge */}
         <motion.div
           initial='hidden'
           animate='visible'
@@ -53,6 +58,7 @@ export default function Hero() {
           <span>Open to full-time roles & freelance projects</span>
         </motion.div>
 
+        {/* Identity line */}
         <motion.p
           initial='hidden'
           animate='visible'
@@ -63,6 +69,7 @@ export default function Hero() {
           Najimul Haque · Full-Stack Developer
         </motion.p>
 
+        {/* Main headline */}
         <motion.h1
           initial='hidden'
           animate='visible'
@@ -78,16 +85,18 @@ export default function Hero() {
           </span>
         </motion.h1>
 
+        {/* Dynamic typing line */}
         <motion.div
           initial='hidden'
           animate='visible'
           variants={fadeUp}
           transition={{ duration: 0.45, delay: 0.21, ease: 'easeOut' }}
-          className='mx-auto mt-4 flex h-8 max-w-full items-center justify-center text-sm text-gray-300 sm:mt-5 sm:h-10 sm:text-base md:text-lg'
+          className='mx-auto mt-4 flex h-8 max-w-full items-center justify-center text-sm text-gray-400/90 sm:mt-5 sm:h-10 sm:text-base md:text-lg'
         >
           <TypingAnimation />
         </motion.div>
 
+        {/* Description */}
         <motion.p
           initial='hidden'
           animate='visible'
@@ -99,6 +108,7 @@ export default function Hero() {
           Next.js, Node.js, and modern product engineering practices.
         </motion.p>
 
+        {/* CTAs */}
         <motion.div
           initial='hidden'
           animate='visible'
@@ -124,12 +134,13 @@ export default function Hero() {
           </SmoothLink>
         </motion.div>
 
+        {/* Tech stack */}
         <motion.div
           initial='hidden'
           animate='visible'
           variants={fadeUp}
           transition={{ duration: 0.5, delay: 0.44, ease: 'easeOut' }}
-          className='mx-auto mt-5 flex max-w-sm flex-wrap justify-center gap-x-3 gap-y-2 text-[11px] font-medium text-gray-500 sm:mt-7 sm:max-w-none sm:text-xs'
+          className='mx-auto mt-5 flex max-w-sm flex-wrap justify-center gap-x-3 gap-y-2 text-[11px] font-medium text-gray-400 sm:mt-7 sm:max-w-none sm:text-xs'
         >
           {techStack.map((technology, index) => (
             <span key={technology} className='flex items-center gap-3'>
@@ -141,6 +152,7 @@ export default function Hero() {
           ))}
         </motion.div>
 
+        {/* Scroll indicator */}
         {!shouldReduceMotion && (
           <motion.div
             animate={{ y: [0, 7, 0], opacity: [0.45, 1, 0.9] }}
