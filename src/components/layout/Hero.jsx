@@ -37,14 +37,14 @@ export default function Hero() {
         </motion.div>
 
         <div className='text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-6'>
-          <TextReveal
+          {/* <TextReveal
             text='Md Najimul'
             delay={0.1}
             className='bg-linear-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent'
-          />
+          /> */}
           <TextReveal
-            text='Haque'
-            delay={0.3}
+            text='NAJIMUL'
+            delay={0.1}
             className='bg-linear-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent'
           />
         </div>

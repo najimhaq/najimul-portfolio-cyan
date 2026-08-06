@@ -27,9 +27,9 @@ export default function ProjectModal({ project, onClose }) {
             <button
               onClick={onClose}
               aria-label='Close project details'
-              className='absolute top-4 right-4 z-10 p-2 rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors'
+              className='absolute top-4 right-4 z-10 p-2 rounded-full bg-red-500/10 hover:bg-white/20 text-white transition-colors'
             >
-              <FaTimes size={16} />
+              <FaTimes size={16} className='text-red-300' />
             </button>
 
             <div className='relative w-full h-64'>

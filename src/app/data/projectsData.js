@@ -1,10 +1,29 @@
 export const projectsData = [
   {
     id: 1,
+    title: 'Learning Platform',
+    description:
+      'A role-based, cohort-driven learning platform built for learning outcomes—not just course consumption.',
+    techs: [
+      'Next.js',
+      'Better-Auth',
+      'Tailwind',
+      'Express.js',
+      'MongoDB Atlas',
+      'Stripe',
+    ],
+    image: '/skillsphere.png',
+    liveLink: 'https://skillsphere.najimhub.xyz/',
+    githubLink: 'https://github.com/najimhaq/skillsphere-frontend',
+    category: 'ecommerce',
+    featured: true,
+  },
+  {
+    id: 2,
     title: 'E-Commerce Platform',
     description:
       'A full-featured e-commerce website with payment gateway, order tracking, and admin panel.',
-    techs: ['Next.js', 'Tailwind', 'MongoDB', 'Stripe'],
+    techs: ['Next.js', 'Tailwind', 'MongoDB Atlas','Express.js', 'Stripe'],
     image: '/suncart.png',
     liveLink: 'https://suncart-summer-essentials-store-ten.vercel.app/',
     githubLink: 'https://github.com/najimhaq/suncart-summer-essentials-store',
@@ -12,19 +31,18 @@ export const projectsData = [
     featured: true,
   },
   {
-    id: 2,
-    title: 'Task Management App',
-    description:
-      'Real-time task manager for team collaboration with drag and drop support.',
-    techs: ['React', 'Hero UI', 'Tailwind CSS', 'Framer Motion'],
-    image: '/keen.png',
-    liveLink: 'https://keen-friends-keeper.vercel.app/',
-    githubLink: 'https://github.com/najimhaq/keen-friends-keeper',
+    id: 7,
+    title: 'Travel Theme',
+    description: 'Customizable travel theme for developers with animations.',
+    techs: ['Next.js', 'Tailwind', 'MongoDB Atlas','Express.js', 'Stripe'],
+    image: '/wonderlast.png',
+    liveLink: 'https://wonderlast-coral.vercel.app/',
+    githubLink: 'https://github.com/najimhaq/wonderlast-travel-practise',
     category: 'productivity',
     featured: false,
   },
   {
-    id: 3,
+    id: 4,
     title: 'Tracker Platform',
     description: 'Markdown supported blogging platform for content creators.',
     techs: ['React', 'Tailwind', 'Daisy UI'],
@@ -35,7 +53,7 @@ export const projectsData = [
     featured: false,
   },
   {
-    id: 4,
+    id: 5,
     title: 'Portfolio Theme',
     description: 'Penguin ecommerce theme for developers with animations.',
     techs: ['React', 'Framer Motion', 'Tailwind'],
@@ -46,7 +64,7 @@ export const projectsData = [
     featured: false,
   },
   {
-    id: 5,
+    id: 6,
     title: 'Restaurant Theme',
     description:
       'Customizable restaurant theme for developers with animations.',
@@ -58,14 +76,17 @@ export const projectsData = [
     featured: true,
   },
   {
-    id: 6,
-    title: 'Travel Theme',
-    description: 'Customizable travel theme for developers with animations.',
-    techs: ['Next.js', 'Tailwind', 'MongoDB', 'Stripe'],
-    image: '/wonderlast.png',
-    liveLink: 'https://wonderlast-coral.vercel.app/',
-    githubLink: 'https://github.com/najimhaq/wonderlast-travel-practise',
+    id: 7,
+    id: 3,
+    title: 'Task Management App',
+    description:
+      'Real-time task manager for team collaboration with drag and drop support.',
+    techs: ['React', 'Hero UI', 'Tailwind CSS', 'Framer Motion'],
+    image: '/keen.png',
+    liveLink: 'https://keen-friends-keeper.vercel.app/',
+    githubLink: 'https://github.com/najimhaq/keen-friends-keeper',
     category: 'productivity',
     featured: false,
   },
 ];
+
