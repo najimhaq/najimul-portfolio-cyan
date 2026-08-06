@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { FiGithub, FiLinkedin, FiMail, FiInstagram } from 'react-icons/fi';
+import Logo from './Logo';
 
 const socials = [
   { icon: FiGithub, href: 'https://github.com/najimhaq', label: 'GitHub' },
@@ -32,12 +33,7 @@ export default function Footer() {
 
       <div className='max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-4 gap-10'>
         <div className='md:col-span-2'>
-          <Link
-            href='/'
-            className='text-2xl font-bold bg-linear-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent'
-          >
-            Najimul
-          </Link>
+          <Logo />
           <p className='mt-4 text-sm text-gray-400 max-w-sm leading-relaxed'>
             Full-stack developer building fast, scalable web applications with
             Next.js, Node.js, and modern web technologies.
