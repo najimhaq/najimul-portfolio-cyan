@@ -24,24 +24,19 @@ export default function Hero() {
   return (
     <section
       id='home'
-      className='relative isolate flex min-h-svh items-center justify-center overflow-hidden px-4 pb-20 pt-28 sm:px-6 sm:py-28 lg:px-8 lg:py-32'
+      className='relative isolate flex min-h-svh items-center justify-center overflow-hidden px-4 pb-16 pt-24 sm:px-6 sm:pb-20 sm:pt-28 lg:px-8 lg:pt-32'
     >
-      {/* Base background */}
       <div className='absolute inset-0 -z-30 bg-[#050507]' />
 
-      {/* Animated background */}
       <div className='absolute inset-0 -z-20 opacity-50 sm:opacity-60 md:opacity-70'>
         <LiquidBackground />
       </div>
 
-      {/* Subtle grid */}
-      <div className='pointer-events-none absolute inset-0 -z-10 opacity-35 bg-[linear-gradient(rgba(255,255,255,0.035)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.035)_1px,transparent_1px)] bg-size-[38px_38px] sm:bg-size-[52px_52px] md:opacity-60' />
+      <div className='pointer-events-none absolute inset-0 -z-10 opacity-30 [background-image:linear-gradient(rgba(255,255,255,0.035)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.035)_1px,transparent_1px)] [background-size:36px_36px] sm:[background-size:48px_48px] md:opacity-60' />
 
-      {/* Desktop ambient glow */}
-      <div className='pointer-events-none absolute left-1/2 top-1/2 -z-10 hidden h-112 w-md -translate-x-1/2 -translate-y-1/2 rounded-full bg-cyan-500/10 blur-[120px] md:block lg:h-136 lg:w-136' />
+      <div className='pointer-events-none absolute left-1/2 top-1/2 -z-10 hidden h-[26rem] w-[26rem] -translate-x-1/2 -translate-y-1/2 rounded-full bg-cyan-500/10 blur-[120px] md:block lg:h-[34rem] lg:w-[34rem]' />
 
       <div className='relative z-10 mx-auto w-full max-w-6xl text-center'>
-        {/* Availability badge */}
         <motion.div
           initial='hidden'
           animate='visible'
@@ -55,11 +50,9 @@ export default function Hero() {
             )}
             <span className='relative inline-flex h-2 w-2 rounded-full bg-emerald-400' />
           </span>
-
           <span>Open to full-time roles & freelance projects</span>
         </motion.div>
 
-        {/* Identity line */}
         <motion.p
           initial='hidden'
           animate='visible'
@@ -70,24 +63,21 @@ export default function Hero() {
           Najimul Haque · Full-Stack Developer
         </motion.p>
 
-        {/* Main headline */}
         <motion.h1
           initial='hidden'
           animate='visible'
           variants={fadeUp}
           transition={{ duration: 0.55, delay: 0.16, ease: 'easeOut' }}
-          className='mx-auto font-sans text-3xl inter font-semibold leading-[1.05] tracking-[-0.045em] text-white sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl'
+          className='mx-auto max-w-5xl font-sans text-[clamp(2.5rem,6vw,5.5rem)] font-semibold leading-[0.98] tracking-[-0.045em] text-white'
         >
-          <span className='block md:whitespace-nowrap'>
+          <span className='block lg:whitespace-nowrap'>
             I build fast, thoughtful
           </span>
-
           <span className='mt-1 block bg-linear-to-r from-cyan-300 via-blue-400 to-purple-400 bg-clip-text text-transparent sm:mt-2'>
             web products.
           </span>
         </motion.h1>
 
-        {/* Dynamic role / typing line */}
         <motion.div
           initial='hidden'
           animate='visible'
@@ -98,7 +88,6 @@ export default function Hero() {
           <TypingAnimation />
         </motion.div>
 
-        {/* Short description */}
         <motion.p
           initial='hidden'
           animate='visible'
@@ -110,17 +99,16 @@ export default function Hero() {
           Next.js, Node.js, and modern product engineering practices.
         </motion.p>
 
-        {/* CTAs */}
         <motion.div
           initial='hidden'
           animate='visible'
           variants={fadeUp}
           transition={{ duration: 0.5, delay: 0.36, ease: 'easeOut' }}
-          className='mx-auto mt-7 flex w-full max-w-xs flex-col justify-center gap-3 sm:mt-8 sm:max-w-none sm:flex-row'
+          className='mx-auto mt-7 flex w-full max-w-sm flex-col items-center justify-center gap-3 sm:mt-8 sm:max-w-none sm:flex-row'
         >
           <SmoothLink
             href='/projects'
-            className='group inline-flex w-full max-w-70 items-center justify-center gap-2 rounded-full bg-linear-to-r from-cyan-500 to-purple-500 px-5 py-3 text-sm font-semibold text-white transition hover:shadow-[0_0_28px_rgba(34,211,238,0.28)] focus:outline-none focus:ring-2 focus:ring-cyan-300 focus:ring-offset-2 focus:ring-offset-black sm:w-auto sm:max-w-none'
+            className='group inline-flex w-full max-w-[280px] items-center justify-center gap-2 rounded-full bg-linear-to-r from-cyan-500 to-purple-500 px-5 py-3 text-sm font-semibold text-white transition hover:shadow-[0_0_28px_rgba(34,211,238,0.28)] focus:outline-none focus:ring-2 focus:ring-cyan-300 focus:ring-offset-2 focus:ring-offset-black sm:w-auto sm:max-w-none'
           >
             View selected work
             <span className='transition-transform duration-200 group-hover:translate-x-1'>
@@ -130,13 +118,12 @@ export default function Hero() {
 
           <SmoothLink
             href='/contact'
-            className='inline-flex w-full max-w-70 items-center justify-center rounded-full border border-white/15 bg-white/3 px-5 py-3 text-sm font-medium text-gray-200 transition hover:border-cyan-300/50 hover:bg-white/6 hover:text-white focus:outline-none focus:ring-2 focus:ring-cyan-300 focus:ring-offset-2 focus:ring-offset-black sm:w-auto sm:max-w-none'
+            className='inline-flex w-full max-w-[280px] items-center justify-center rounded-full border border-white/15 bg-white/[0.03] px-5 py-3 text-sm font-medium text-gray-200 transition hover:border-cyan-300/50 hover:bg-white/[0.06] hover:text-white focus:outline-none focus:ring-2 focus:ring-cyan-300 focus:ring-offset-2 focus:ring-offset-black sm:w-auto sm:max-w-none'
           >
             Start a project
           </SmoothLink>
         </motion.div>
 
-        {/* Tech stack */}
         <motion.div
           initial='hidden'
           animate='visible'
@@ -154,12 +141,11 @@ export default function Hero() {
           ))}
         </motion.div>
 
-        {/* Scroll indicator */}
         {!shouldReduceMotion && (
           <motion.div
             animate={{ y: [0, 7, 0], opacity: [0.45, 1, 0.9] }}
             transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
-            className='mt-3 flex flex-col items-center gap-1.5 sm:mt-7 sm:gap-2'
+            className='mt-5 flex flex-col items-center gap-1.5 sm:mt-7 sm:gap-2'
             aria-hidden='true'
           >
             <span className='text-[9px] uppercase tracking-[0.16em] text-gray-500'>
