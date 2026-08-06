@@ -1,101 +1,72 @@
-# 🚀 Najimul Portfolio
+# Najimul — Developer Portfolio
 
-> "I'm Najimul, a full-stack developer from a non-CSE background, self-taught and passionate about building real-world products with the MERN stack and Next.js."
+<p align="center">
+  <a href="https://www.najimul.com/">Live site</a>
+  &nbsp;·&nbsp;
+  <a href="https://github.com/najimhaq">GitHub</a>
+  &nbsp;·&nbsp;
+  <a href="mailto:mdnajimulhaque@gmail.com">Email</a>
+</p>
 
-A modern, high-performance portfolio website built with **Next.js**, featuring buttery-smooth scrolling via **Lenis**, stunning animations powered by **GSAP** and **Framer Motion**, and a sleek dark UI crafted with **Tailwind CSS**.
+<p align="center">
+  A fast, interactive portfolio for <strong>Najimul Haque</strong> — a self-taught full-stack developer building polished, accessible web experiences with Next.js, React, and modern frontend tooling.
+</p>
 
----
-
-## ✨ Live Demo
-
-🔗 **[View Live Portfolio](https://www.najimul.com/)**
-
----
-
-## 🛠️ Tech Stack
-![Next.js](https://img.shields.io/badge/Next.js-15-black?style=flat-square&logo=next.js)
-![React](https://img.shields.io/badge/React-19-61DAFB?style=flat-square&logo=react)
-![Tailwind](https://img.shields.io/badge/Tailwind-3.4-38BDF8?style=flat-square&logo=tailwindcss)
-![Lenis](https://img.shields.io/badge/Lenis-1.x-FF6B6B?style=flat-square)
-![Framer Motion](https://img.shields.io/badge/Framer_Motion-12-FF0055?style=flat-square&logo=framer)
-
-
-| Technology | Purpose |
-|------------|---------|
-| **Next.js 15** | React framework with App Router for SSR & SSG |
-| **React 19** | UI library with latest features |
-| **Tailwind CSS 4** | Utility-first CSS framework for rapid styling |
-| **Lenis** | Buttery smooth scroll with 60fps performance |
-| **GSAP** | Advanced timeline animations & scroll-triggered effects |
-| **Framer Motion** | React-native animations, gestures & layout transitions |
-| **React Icons** | Beautiful icon library |
+<p align="center">
+  <img src="https://img.shields.io/badge/Next.js-16-black?style=for-the-badge&logo=next.js" alt="Next.js 16" />
+  <img src="https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react&logoColor=white" alt="React 19" />
+  <img src="https://img.shields.io/badge/Tailwind_CSS-4-38BDF8?style=for-the-badge&logo=tailwindcss&logoColor=white" alt="Tailwind CSS 4" />
+  <img src="https://img.shields.io/badge/Deployed_on-Vercel-black?style=for-the-badge&logo=vercel" alt="Deployed on Vercel" />
+</p>
 
 ---
 
-## 🎨 Features
+## Overview
 
-### Smooth Scrolling
-- **Lenis** integration for buttery smooth scroll experience
-- Custom scroll progress bar (linear + circular)
-- Smooth anchor navigation with offset support
-- Back-to-top button with animated reveal
+This is not a static résumé page. It is a responsive, motion-led portfolio designed to demonstrate frontend craft: smooth scrolling, deliberate micro-interactions, keyboard-first navigation, project storytelling, and an accessible dark interface.
 
-### Animations & Interactions
-- **GSAP** text reveal animations on hero section
-- **Framer Motion** scroll-triggered section reveals
-- 3D card tilt effect on project cards (mouse-follow)
-- Image reveal with clip-path animation on scroll
-- Staggered entrance animations for grid items
-- Magnetic hover effects on buttons
-- Glow & gradient transitions on hover
+> **Live:** [www.najimul.com](https://www.najimul.com/)
 
-### UI/UX
-- Dark theme with cyan-purple gradient accents
-- Fully responsive design (mobile → desktop)
-- Custom scrollbar styling
-- Filterable project grid with animated transitions
-- Glassmorphism effects with backdrop blur
-- Loading states & empty state handling
+## Highlights
 
-### Performance
-- Optimized images with Next.js Image component
-- Smooth 60fps animations via `requestAnimationFrame`
-- Efficient re-renders with React best practices
-- SEO-friendly with Next.js metadata API
+- **Command palette** — press `⌘ K` on macOS or `Ctrl K` on Windows/Linux to quickly navigate projects, skills, contact details, social links, and résumé.
+- **Interactive terminal easter egg** — run `sudo hire me` from the command palette for a small terminal boot sequence.
+- **Smooth, intentional motion** — Lenis scrolling, GSAP timelines, and Framer Motion scroll reveals.
+- **Responsive by design** — layouts and interaction details adapted from mobile to wide desktop displays.
+- **Developer-focused projects** — filterable project work with live demos, source links, technology tags, and case-study-ready structure.
+- **Quality tooling** — metadata, Open Graph previews, Vercel Analytics, scroll progress, back-to-top navigation, and reduced-motion-friendly UI patterns.
 
----
+## Stack
 
-## 📁 Project Structure
+| Technology | Role |
+| --- | --- |
+| [Next.js 16](https://nextjs.org/) | App Router, routing, metadata, optimized production builds |
+| [React 19](https://react.dev/) | Component-based interface development |
+| [Tailwind CSS 4](https://tailwindcss.com/) | Responsive styling and design tokens |
+| [Lenis](https://lenis.darkroom.engineering/) | Smooth scrolling experience |
+| [GSAP](https://gsap.com/) | Timeline and scroll-driven animation |
+| [Framer Motion](https://www.framer.com/motion/) | Declarative motion, layout, and reveal animations |
+| [cmdk](https://cmdk.paco.me/) | Keyboard command menu |
+| [Lucide](https://lucide.dev/) | Lightweight SVG icon set |
+| [Vercel Analytics](https://vercel.com/analytics) | Production visitor analytics |
 
-```
-app/
-├── components/
-│   ├── animations/          # Reusable animation components
-│   ├── providers/           # Context providers (Lenis, etc.)
-│   ├── sections/            # Page sections (Hero, Projects, etc.)
-│   └── ui/                  # Reusable UI components
-├── data/
-│   └── projectsData.js      # Projects data
-├── hooks/
-│   └── useLenis.js          # Custom Lenis hook
-├── globals.css              # Global styles & Tailwind directives
-├── layout.jsx               # Root layout with providers
-└── page.jsx                 # Main page
+## Interaction Map
 
-public/
-├── images/                  # Project screenshots & assets
-└── favicon.ico
-```
+| Feature | What it does |
+| --- | --- |
+| Navigation | Hides while scrolling down and returns while scrolling up |
+| Scroll progress | Gives visitors visual feedback about page position |
+| Cursor glow | Desktop-only ambient spotlight; disabled for coarse pointers and reduced-motion preferences |
+| Project cards | Motion-led reveals, image treatments, technology tags, live demo, and GitHub links |
+| Command menu | Search and navigate the portfolio without touching the mouse |
+| Terminal moment | A playful, optional developer-centric interaction — never blocking core navigation |
 
----
-
-## 🚀 Getting Started
+## Run Locally
 
 ### Prerequisites
 
-- **Node.js** 18+
-- **Yarn** package manager
-- **macOS** (development environment)
+- Node.js 20.9 or later
+- Yarn
 
 ### Installation
 
@@ -103,186 +74,117 @@ public/
 # Clone the repository
 git clone https://github.com/najimhaq/najimul-portfolio-cyan.git
 
-# Navigate to project directory
-cd najimul-portfolio
+# Enter the project
+cd najimul-portfolio-cyan
 
-# Install dependencies with Yarn
+# Install dependencies
 yarn install
 
-# Start development server
+# Start the local development server
 yarn dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-### Build for Production
+### Production build
 
 ```bash
-# Create optimized production build
 yarn build
-
-# Start production server
 yarn start
 ```
 
----
+## Project Structure
 
-## 📦 Dependencies
+```text
+app/
+├── about/                  # About route
+├── contact/                # Contact route
+├── projects/               # Projects route
+├── skills/                 # Skills route
+├── layout.jsx              # Global metadata, fonts, providers, navigation
+├── page.jsx                # Home route
+└── globals.css             # Global styles and design primitives
 
-```json
-{
-  "next": "^15.x",
-  "react": "^19.x",
-  "react-dom": "^19.x",
-  "tailwindcss": "^4.x",
-  "lenis": "^1.x",
-  "gsap": "^3.x",
-  "framer-motion": "^11.x",
-  "react-icons": "^5.x"
-}
+components/
+├── cursor/                 # Desktop cursor glow
+├── layout/                 # Navbar and footer
+├── sections/               # Page-level sections
+└── ui/                     # Command palette, terminal, progress, shared UI
+
+public/
+├── assets/                 # Résumé and static files
+└── images/                 # Portfolio and project visual assets
 ```
 
----
+> The exact directory layout may evolve as the portfolio grows; components are grouped by responsibility rather than by a single page.
 
-## 🎯 Key Components
+## Customization
 
-### SmoothScrollProvider
-Global Lenis instance wrapped in React Context. Provides smooth scrolling across the entire application and integrates with GSAP ScrollTrigger.
+### Portfolio information
 
-### ScrollProgressBar
-Real-time scroll progress indicator with:
-- Top linear progress bar (gradient animated)
-- Circular progress indicator (desktop only)
-- Spring physics for natural motion
+Update your personal links and résumé URL in:
 
-### ProjectCard
-Interactive project card featuring:
-- 3D tilt effect on mouse move
-- Image reveal animation on scroll
-- Hover overlay with live/GitHub links
-- Tech stack tags with gradient borders
-- Glow effects and gradient underline
+- `components/layout/Navbar.jsx`
+- `components/ui/CommandPalette.jsx`
+- `app/layout.jsx`
 
-### Section
-Reusable section wrapper with:
-- Scroll-triggered entrance animations
-- Decorative gradient orbs
-- Animated section labels
-- Consistent spacing & typography
+### Projects
 
----
+Add or edit project data in your project data file, then supply:
 
-## 🎨 Customization
-
-### Changing Colors
-Edit the gradient colors in `tailwind.config.js` or directly in component classes:
-
-```css
-/* From cyan to purple (default) */
-bg-gradient-to-r from-cyan-500 to-purple-600
-
-/* Change to your preferred palette */
-bg-gradient-to-r from-emerald-500 to-blue-600
-```
-
-### Adding New Projects
-Update `app/data/projectsData.js`:
-
-```javascript
+```js
 {
-  id: 6,
-  title: 'Your New Project',
-  description: 'Project description here.',
-  techs: ['Next.js', 'Tailwind', 'MongoDB'],
-  image: '/your-image.png',
-  liveLink: 'https://your-project.vercel.app',
-  githubLink: 'https://github.com/yourusername/project',
+  id: 1,
+  title: 'Project Name',
+  description: 'A concise explanation of the product and its value.',
+  techs: ['Next.js', 'Tailwind CSS', 'MongoDB'],
+  image: '/images/project-name.png',
+  liveLink: 'https://example.com',
+  githubLink: 'https://github.com/username/project-name',
   category: 'webapp',
 }
 ```
 
-### Adjusting Scroll Speed
-Modify Lenis configuration in `SmoothScrollProvider.jsx`:
+For stronger project pages, describe each build using: **problem → decision → result**.
 
-```javascript
-const lenis = new Lenis({
-  duration: 1.2,        // Higher = slower scroll
-  wheelMultiplier: 1,   // Mouse scroll speed
-  touchMultiplier: 2,   // Touch scroll speed
-});
+### Motion preferences
+
+Keep decorative motion optional. Desktop-only cursor effects should remain disabled for touch/coarse pointers, and all nonessential motion should respect `prefers-reduced-motion`.
+
+## Environment Variables
+
+Create `.env.local` when you need a public canonical URL or future integrations:
+
+```env
+NEXT_PUBLIC_SITE_URL=https://www.najimul.com
 ```
 
----
+Do not commit `.env.local` or API secrets.
 
-## 📱 Responsive Breakpoints
+## Deployment
 
-| Breakpoint | Width | Usage |
-|------------|-------|-------|
-| `sm` | 640px | Small tablets |
-| `md` | 768px | Tablets |
-| `lg` | 1024px | Laptops |
-| `xl` | 1280px | Desktops |
-| `2xl` | 1536px | Large screens |
-
----
-
-## 🌐 Deployment
-
-### Vercel (Recommended)
+The portfolio is designed for [Vercel](https://vercel.com/).
 
 ```bash
-# Install Vercel CLI
 yarn global add vercel
-
-# Deploy
 vercel --prod
 ```
 
-### Environment Variables
+Before deploying, confirm that production metadata, Open Graph assets, contact links, analytics, and the résumé path are correct.
 
-Create `.env.local` for local development:
+## Connect
 
-```env
-NEXT_PUBLIC_SITE_URL=https://your-domain.com
-```
+- Website: [www.najimul.com](https://www.najimul.com/)
+- GitHub: [@najimhaq](https://github.com/najimhaq)
+- Email: [mdnajimulhaque@gmail.com](mailto:mdnajimulhaque@gmail.com)
+- LinkedIn: add your profile URL here
 
----
+## License
 
-## 🤝 Connect With Me
-
-- 🌐 **Portfolio**: [your-portfolio-url.vercel.app](https://www.najimul.com/)
-- 💻 **GitHub**: [@najimhaq](https://github.com/najimhaq)
-- 💼 **LinkedIn**: [Your LinkedIn](https://linkedin.com/in/yourprofile)
-- 📧 **Email**: mdnajimulhaque@gmail.com
+Distributed under the [MIT License](LICENSE).
 
 ---
-
-## 📄 License
-
-This project is open source and available under the [MIT License](LICENSE).
-
----
-
-## 🙏 Acknowledgments
-
-- [Lenis](https://github.com/darkroomengineering/lenis) by Darkroom Engineering
-- [GSAP](https://greensock.com/gsap/) by GreenSock
-- [Framer Motion](https://www.framer.com/motion/) by Framer
-- [Tailwind CSS](https://tailwindcss.com/) by Tailwind Labs
-- [Next.js](https://nextjs.org/) by Vercel
-
----
-##  🤝 Contributing
-- Contributions, issues and feature requests are welcome!
-- Fork the project
-- Create your feature branch (git checkout -b feature/AmazingFeature)
-- Commit your changes (git commit -m 'Add some AmazingFeature')
-- Push to the branch (git push origin feature/AmazingFeature)
-- Open a Pull Request
-
-## 📧 Contact
-For questions or support, please open an issue on GitHub.
 
 <p align="center">
-  Built with ❤️ by <strong>Najimul</strong>
+  Built with care by <strong>Najimul Haque</strong>.
 </p>

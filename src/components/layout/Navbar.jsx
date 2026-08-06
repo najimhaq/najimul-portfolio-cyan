@@ -1,8 +1,10 @@
+// src/components/layout/Navbar.jsx
 'use client';
 
 import { motion, useMotionValueEvent, useScroll } from 'framer-motion';
 import { useState } from 'react';
 import Link from 'next/link';
+import Logo from './Logo';
 
 const navLinks = [
   { name: 'Home', href: '/' },
@@ -39,12 +41,7 @@ export default function Navbar() {
       }`}
     >
       <div className='max-w-7xl mx-auto px-6 py-4 flex items-center justify-between'>
-        <Link
-          href='/'
-          className='text-2xl font-bold bg-linear-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent'
-        >
-          Najimul
-        </Link>
+        <Logo />
 
         <div className='hidden md:flex items-center gap-8'>
           {navLinks.map((link) => (

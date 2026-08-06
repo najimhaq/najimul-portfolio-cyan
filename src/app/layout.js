@@ -8,10 +8,9 @@ import SmoothScrollProvider from '@/components/ui/SmoothScroll';
 import Footer from '@/components/layout/Footer';
 import { Analytics } from '@vercel/analytics/next';
 
-
 const inter = Inter({
   subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
+  display: 'swap',
   variable: '--font-inter',
 });
 
