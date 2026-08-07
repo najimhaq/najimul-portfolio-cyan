@@ -35,10 +35,10 @@ export default function Hero() {
       </div>
 
       {/* Subtle grid */}
-      <div className='pointer-events-none absolute inset-0 -z-10 opacity-30 [background-image:linear-gradient(rgba(255,255,255,0.035)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.035)_1px,transparent_1px)] [background-size:36px_36px] sm:[background-size:48px_48px] md:opacity-60' />
+      <div className='pointer-events-none absolute inset-0 -z-10 opacity-30 bg-[linear-gradient(rgba(255,255,255,0.035)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.035)_1px,transparent_1px)] bg-size-[36px_36px] sm:bg-size-[48px_48px] md:opacity-60' />
 
       {/* Desktop ambient glow */}
-      <div className='pointer-events-none absolute left-1/2 top-1/2 -z-10 hidden h-[26rem] w-[26rem] -translate-x-1/2 -translate-y-1/2 rounded-full bg-cyan-500/10 blur-[120px] md:block lg:h-[34rem] lg:w-[34rem]' />
+      <div className='pointer-events-none absolute left-1/2 top-1/2 -z-10 hidden h-104 w-104 -translate-x-1/2 -translate-y-1/2 rounded-full bg-cyan-500/10 blur-[120px] md:block lg:h-136 lg:w-136' />
 
       <div className='relative z-10 mx-auto w-full max-w-6xl text-center'>
         {/* Availability badge */}
@@ -75,7 +75,7 @@ export default function Hero() {
           animate='visible'
           variants={fadeUp}
           transition={{ duration: 0.55, delay: 0.16, ease: 'easeOut' }}
-          className='mx-auto max-w-5xl font-sans text-[clamp(2.5rem,6vw,5.5rem)] font-semibold leading-[0.98] tracking-[-0.045em] text-white'
+          className='mx-auto max-w-5xl font-sans inter text-[clamp(2.5rem,6vw,5.5rem)] font-semibold leading-[0.98] tracking-[-0.045em] text-white'
         >
           <span className='block lg:whitespace-nowrap'>
             I build fast, thoughtful
@@ -102,7 +102,7 @@ export default function Hero() {
           animate='visible'
           variants={fadeUp}
           transition={{ duration: 0.5, delay: 0.28, ease: 'easeOut' }}
-          className='mx-auto mt-3 max-w-xl text-sm leading-6 text-gray-400 sm:mt-4 sm:max-w-2xl sm:text-base sm:leading-7 md:text-lg'
+          className='mx-auto mt-3 max-w-xl text-sm leading-6 text-gray-400 sm:mt-4 sm:max-w-2xl sm:text-base sm:leading-7 md:text-lg '
         >
           I turn ideas into accessible, high-performance applications using
           Next.js, Node.js, and modern product engineering practices.
@@ -118,7 +118,7 @@ export default function Hero() {
         >
           <SmoothLink
             href='/projects'
-            className='group inline-flex w-full max-w-[280px] items-center justify-center gap-2 rounded-full bg-linear-to-r from-cyan-500 to-purple-500 px-5 py-3 text-sm font-semibold text-white transition hover:shadow-[0_0_28px_rgba(34,211,238,0.28)] focus:outline-none focus:ring-2 focus:ring-cyan-300 focus:ring-offset-2 focus:ring-offset-black sm:w-auto sm:max-w-none'
+            className='group inline-flex w-full max-w-70 items-center justify-center gap-2 rounded-full bg-linear-to-r from-cyan-500 to-purple-500 px-5 py-3 text-sm font-semibold text-white transition hover:shadow-[0_0_28px_rgba(34,211,238,0.28)] focus:outline-none focus:ring-2 focus:ring-cyan-300 focus:ring-offset-2 focus:ring-offset-black sm:w-auto sm:max-w-none'
           >
             View selected work
             <span className='transition-transform duration-200 group-hover:translate-x-1'>
@@ -128,7 +128,7 @@ export default function Hero() {
 
           <SmoothLink
             href='/contact'
-            className='inline-flex w-full max-w-[280px] items-center justify-center rounded-full border border-white/15 bg-white/[0.03] px-5 py-3 text-sm font-medium text-gray-200 transition hover:border-cyan-300/50 hover:bg-white/[0.06] hover:text-white focus:outline-none focus:ring-2 focus:ring-cyan-300 focus:ring-offset-2 focus:ring-offset-black sm:w-auto sm:max-w-none'
+            className='inline-flex w-full max-w-70 items-center justify-center rounded-full border border-white/15 bg-white/3 px-5 py-3 text-sm font-medium text-gray-200 transition hover:border-cyan-300/50 hover:bg-white/6 hover:text-white focus:outline-none focus:ring-2 focus:ring-cyan-300 focus:ring-offset-2 focus:ring-offset-black sm:w-auto sm:max-w-none'
           >
             Start a project
           </SmoothLink>
