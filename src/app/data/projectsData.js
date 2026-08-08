@@ -15,7 +15,7 @@ export const projectsData = [
     image: '/skillsphere.png',
     liveLink: 'https://skillsphere.najimhub.xyz/',
     githubLink: 'https://github.com/najimhaq/skillsphere-frontend',
-    category: 'ecommerce',
+    category: 'Learning',
     featured: true,
   },
   {
@@ -23,7 +23,7 @@ export const projectsData = [
     title: 'E-Commerce Platform',
     description:
       'A full-featured e-commerce website with payment gateway, order tracking, and admin panel.',
-    techs: ['Next.js', 'Tailwind', 'MongoDB Atlas','Express.js', 'Stripe'],
+    techs: ['Next.js', 'Tailwind', 'MongoDB Atlas', 'Express.js', 'Stripe'],
     image: '/suncart.png',
     liveLink: 'https://suncart-summer-essentials-store-ten.vercel.app/',
     githubLink: 'https://github.com/najimhaq/suncart-summer-essentials-store',
@@ -31,10 +31,10 @@ export const projectsData = [
     featured: true,
   },
   {
-    id: 7,
+    id: 3,
     title: 'Travel Theme',
     description: 'Customizable travel theme for developers with animations.',
-    techs: ['Next.js', 'Tailwind', 'MongoDB Atlas','Express.js', 'Stripe'],
+    techs: ['Next.js', 'Tailwind', 'MongoDB Atlas', 'Express.js', 'Stripe'],
     image: '/wonderlast.png',
     liveLink: 'https://wonderlast-coral.vercel.app/',
     githubLink: 'https://github.com/najimhaq/wonderlast-travel-practise',
@@ -75,9 +75,49 @@ export const projectsData = [
     category: 'ecommerce',
     featured: true,
   },
+
   {
     id: 7,
-    id: 3,
+    title: 'Medical App',
+    description:
+      'A Doctor Appointment Booking System where users can browse available doctors from the home page, view details, and book appointments.',
+    techs: [
+      'Next.js',
+      'Tailwind CSS',
+      'Framer Motion',
+      'Lenis',
+      'Express.js',
+      'postgreSQL',
+      'Prisma ORM',
+    ],
+    image: '/micare.png',
+    liveLink: 'https://micare.vercel.app/',
+    githubLink:
+      'https://github.com/najimhaq/miCare-doctor-appointment-app-client',
+    category: 'Medical',
+    featured: false,
+  },
+  {
+    id: 8,
+    title: 'Rental App',
+    description:
+      'The Property Rental & Booking Platform helps property owners list rental properties and allows tenants to discover, book, and pay reservation fees online.',
+    techs: [
+      'Next.js',
+      'Tailwind CSS',
+      'Framer Motion',
+      'Express.js',
+      'postgreSQL',
+      'Prisma ORM',
+    ],
+    image: '/staynest.png',
+    liveLink: 'https://staynest.vercel.app/',
+    githubLink: 'https://github.com/najimhaq/nest-home-client-side',
+    category: 'Rental',
+    featured: false,
+  },
+  {
+    id: 9,
     title: 'Task Management App',
     description:
       'Real-time task manager for team collaboration with drag and drop support.',
@@ -89,4 +129,3 @@ export const projectsData = [
     featured: false,
   },
 ];
-
